@@ -39,6 +39,13 @@ h2 {
     width: 20%;
     text-align: center;
     padding: .4em;
+    border:rgb(145, 145, 214) solid 2px;
+    border-radius: 1em;
+}
+
+.btn:hover {
+    cursor: pointer;
+
 }
 
 .selected {

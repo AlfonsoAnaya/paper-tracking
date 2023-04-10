@@ -1,7 +1,7 @@
 let papersStatus = []
 const papersContainer = document.getElementById
 
-let newData =  {
+/*let newData =  {
     id: 4,
     title: "Paper 04",
     Author01: false,
@@ -10,15 +10,15 @@ let newData =  {
 }
 
 async function getData() {
-    const papersPromise = await fetch("")
+    coNastkat papersPromise = await fetch("")
     papersStatus = await papersPromise.json();
-    console.log(papersStatus)
+    coNastkaole.log(papersStatus)
     papersStatus.map(paper => {
         document.createElement("div")
     })
-    let aa1 = document.getElementById("btn-AA")
-    aa1.addEventListener("click", () => {
-        console.log("clicked :3")
+    let AlfoNastkao1 = document.getElementById("btn-AlfoNastkao")
+    AlfoNastkao1.addEventListener("click", () => {
+        coNastkaole.log("clicked :3")
         fetch("data.json", {
             method: 'Post',
             headers: {
@@ -26,17 +26,18 @@ async function getData() {
             },
             body: JSON.stringify(newData),
             })
-            .then(response => response.json())
+            .then(respoNastkae => respoNastkae.json())
             .then(data => {
-            console.log('Success:', data);
+            coNastkaole.log('Success:', data);
             })
             .catch((error) => {
-            console.error('Error:', error);
+            coNastkaole.error('Error:', error);
             });
     })
 }
 
 getData()
+*/
 
 
 
@@ -44,37 +45,41 @@ getData()
 
 
 
-
-let amw1 = document.getElementById("btn-AMW")
-let amw2 = document.getElementById("btn-AMW2")
-let amw3 = document.getElementById("btn-AMW3")
-/*let aa1 = document.getElementById("btn-AA")*/
-let aa2 = document.getElementById("btn-AA3")
-let ns1 = document.getElementById("btn-NS")
-let ns2 = document.getElementById("btn-NS2")
-let pz1 = document.getElementById("btn-PZ")
-let pz2 = document.getElementById("btn-PZ2")
+let Natalia1 = document.getElementById("btn-Natalia")
+let Natalia2 = document.getElementById("btn-Natalia2")
+let Natalia3 = document.getElementById("btn-Natalia3")
+let Alfonso1 = document.getElementById("btn-Alfonso1")
+let Alfonso3 = document.getElementById("btn-Alfonso3")
+let Nastka1 = document.getElementById("btn-Nastka")
+let Nastka2 = document.getElementById("btn-Nastka2")
+let Paula1 = document.getElementById("btn-Paula")
+let Paula2 = document.getElementById("btn-Paula2")
 
 let free1 = document.getElementById("btn-F")
 let free2 = document.getElementById("btn-F2")
 let free3 = document.getElementById("btn-F3")
 
-amw1.addEventListener("click", function(){activate(amw1, free1)})
-amw2.addEventListener("click", function(){activate(amw2, free2)})
-amw3.addEventListener("click", function(){activate(amw3, free3)})
+Natalia1.addEventListener("click", function(){activate(Natalia1, free1)})
+Natalia2.addEventListener("click", function(){activate(Natalia2, free2)})
+Natalia3.addEventListener("click", function(){activate(Natalia3, free3)})
+Alfonso1.addEventListener("click", function(){activate(Alfonso1, free1)})
+Alfonso3.addEventListener("click", function(){activate(Alfonso3, free3)})
+Nastka1.addEventListener("click", function(){activate(Nastka1, free1)})
+Nastka2.addEventListener("click", function(){activate(Nastka2, free2)})
+Paula1.addEventListener("click", function(){activate(Paula1, free1)})
+Paula2.addEventListener("click", function(){activate(Paula2, free2)})
 
-aa2.addEventListener("click", function(){activate(aa2, free3)})
-ns1.addEventListener("click", function(){activate(ns1, free1)})
-ns2.addEventListener("click", function(){activate(ns2, free2)})
-pz1.addEventListener("click", function(){activate(pz1, free1)})
-pz2.addEventListener("click", function(){activate(pz2, free2)})
 
-function activate(btn, def) {
-    btn.classList.toggle("selected")
-    if (def.classList.contains("selected")) {
-        def.classList.remove("selected")
+
+function activate(primary, se1) {
+    if (se1.classList.contains('selected')) {
+        primary.classList.toggle("selected");
+        se1.classList.toggle("selected");
+    } else if (!primary.classList.contains('selected')) {
+        //do nothing
     } else {
-        def.classList.add("selected")
-    }     
+        primary.classList.toggle("selected");
+        se1.classList.toggle("selected");
+    }
 }
 
