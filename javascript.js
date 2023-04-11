@@ -1,5 +1,4 @@
 let papersStatus = []
-const papersContainer = document.getElementById
 
 /*let newData =  {
     id: 4,
