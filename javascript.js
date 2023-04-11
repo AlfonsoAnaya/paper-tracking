@@ -39,12 +39,6 @@ async function getData() {
 getData()
 */
 
-
-
-
-
-
-
 let Natalia1 = document.getElementById("btn-Natalia")
 let Natalia2 = document.getElementById("btn-Natalia2")
 let Natalia3 = document.getElementById("btn-Natalia3")
@@ -69,10 +63,34 @@ Nastka2.addEventListener("click", function(){activate(Nastka2, free2)})
 Paula1.addEventListener("click", function(){activate(Paula1, free1)})
 Paula2.addEventListener("click", function(){activate(Paula2, free2)})
 
+free1.addEventListener("click", function(){activate(free1, Natalia1, Alfonso1, Nastka1, Paula1)});
+free2.addEventListener("click", function(){activate(free2, Natalia2, Paula2, Nastka2)});
+free3.addEventListener("click", function(){activate(free3, Natalia3, Alfonso3)});
 
 
-function activate(primary, se1) {
-    if (se1.classList.contains('selected')) {
+function activate(primary, se1, se2, se3, se4) {
+    if (primary === free1) {
+        if (!primary.classList.contains('selected')) {
+            primary.classList.add('selected');
+            se1.classList.remove('selected');
+            se2.classList.remove('selected');
+
+            se4.classList.remove('selected');
+        }
+    } else if (primary === free2) {
+        if (!primary.classList.contains('selected')) {
+            primary.classList.add('selected');
+            se1.classList.remove('selected');
+            se2.classList.remove('selected');
+            se3.classList.remove('selected');
+        }
+    } else if (primary === free3) {
+        if (!primary.classList.contains('selected')) {
+            primary.classList.add('selected');
+            se1.classList.remove('selected');
+            se2.classList.remove('selected');
+        }
+    } else if (se1.classList.contains('selected')) {
         primary.classList.toggle("selected");
         se1.classList.toggle("selected");
     } else if (!primary.classList.contains('selected')) {
